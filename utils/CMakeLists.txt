@@ -2,16 +2,18 @@ cmake_minimum_required(VERSION 2.8)
 
 set (CMAKE_CXX_STANDARD 11)
 
-project(filler)
+project(filler-utils)
 
 list(APPEND HEADERS
-  "range.hpp"
-  "randomtimestamp.hpp"
+  "timeparser.hpp"
+  "random.hpp"
+  "timer.hpp"
 )
 
 list(APPEND SOURCES
-  "range.cpp"
-  "randomtimestamp.cpp"
+  "timeparser.cpp"
+  "random.cpp"
+  "timer.cpp"
 )
 
 list(APPEND SRC
@@ -19,4 +21,4 @@ list(APPEND SRC
   ${SOURCES}
 )
 
-add_library(include STATIC ${SRC})
+add_library(utils STATIC ${SRC})
